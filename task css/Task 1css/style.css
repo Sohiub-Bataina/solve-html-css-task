@@ -1,0 +1,36 @@
+.highlightt{
+    color: blue;
+    
+}
+#green{
+    color: green;
+}
+#red{
+    color: red;
+}
+.header-color{
+    color: aqua;
+    text-decoration: underline;
+
+}
+#box-div{
+    background-color:aquamarine;
+    color:goldenrod;
+}
+#sky-blue{
+    background-color:skyblue;
+    color: white;
+}
+.orange{
+    background-color:rgb(250, 108, 56);
+    color: white;
+}
+.box-3d {
+    width: 300px;
+    height:auto;
+    padding: 20px;
+    border: 10px outset gray; 
+    background-color: rgb(250, 213, 188); 
+    
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .overline {
+      position: relative;
+      display: inline-block;
+      padding-top: 5px; 
+    }
+
+    .overline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 2px solid green; 
+      opacity: 0.7; 
+    }
+.line-through-custom {
+      position: relative;
+      display: inline-block;
+    }
+    
+
+    .line-through-custom::after {
+      content: '';
+      position:absolute;
+      left: 0;
+      bottom: 40%;
+      width: 100%;
+      border-bottom: 2px solid grey;
+      opacity: 0.7; 
+    }
+.underline-custom{
+    position: relative;
+    display: inline-block;
+}
+.underline-custom::after{
+        content: ' ';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        border-bottom: 2px solid purple;
+
+
+    }
+    .lines-around {
+      position: relative;
+      display: inline-block;
+      padding: 10px 0;
+    }
+
+    .lines-around::before,
+    .lines-around::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      border-top: 2px solid blue; 
+    }
+
+    .lines-around::before {
+      top: 0px;
+    }
+    .lines-around::after {
+      bottom: -10px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <h2 class="overline">This Text Decorate Using Overline</h2>
+    <Main>
+    <p class="line-through-custom">This Text Decorate Using Overline Line-through</p><br>
+    <p class="underline-custom">This Text Decorate Using Overline Underline</p><br>
+    <p class="lines-around">This Text Decorate Using Overline and Underline</p>
+</Main>
+</body>
+</html>
