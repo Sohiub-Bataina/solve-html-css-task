@@ -73,21 +73,26 @@ div ul li:hover{
 .vertical-nav {
 display: flex;
 flex-direction: column;
+width: 60px;
             background-color: #fff;
-            padding: 10px;
+           position: sticky;
             border-left: 1px solid #ddd;
             width: 75px;
             right: 0;
-            top: 155px; /* تحت الهيدر والشريط الأفقي */
-            height: calc(100% - 120px); /* الارتفاع المناسب بعد الهيدر والشريط الأفقي */
-            z-index: 1000; /* التأكد من ظهوره فوق الشريط الأفقي */
+            top: 155px; 
+           
         }
 
         .vertical-nav ul {
+            padding-left:  0px;
+            width: 50px;
+            display: flex;
+            flex-direction: column;
             list-style-type: none;
         }
 
         .vertical-nav ul li {
+            width: 77px;
            padding-bottom: 30px;
             cursor: pointer;
             height: 50;
@@ -106,6 +111,13 @@ flex-direction: column;
     grid-template-rows: repeat(2,1fr);
     gap: 20px;
     padding: 20px;
+}
+.right{
+    width: 40px;
+    margin-left: 171px;
+
+
+
 }
 
 .video-card {
@@ -195,7 +207,6 @@ flex-direction: column;
             </div>
         </div>
 
-        <!-- إضافة المزيد من الفيديوهات هنا -->
     </main>
     <div class="right">
         <nav class="vertical-nav">
@@ -207,6 +218,9 @@ flex-direction: column;
             </ul>
         </nav>
     </div>
+
+    
 </div>
+    
 </body>
 </html>
