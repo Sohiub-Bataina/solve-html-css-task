@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); 
+      grid-template-rows: repeat(3, 1fr); 
+      gap: 10px;
+     
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .sub-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .sub-grid2 {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr); 
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+
+    .sub-item {
+      background-color: #bbb;
+      padding: 5px;
+    }
+
+    .item1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .item2 {
+      grid-column: 2 / 2;
+      grid-row: 1 / 2;
+    }
+
+    .item3 {
+      grid-column: 3 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .item4 {
+      grid-column: 4 / 4;
+      grid-row: 1 / 2;
+    }
+
+    .item5 {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    .item6 {
+      grid-column: 2 / 2;
+      grid-row: 2 / 3;
+    }
+
+    .item7 {
+      grid-column: 3 / 3;
+      grid-row: 2 / 3;
+    }
+
+    .item8 {
+      grid-column: 4 / 4;
+      grid-row: 2 / 3;
+    }
+
+    .item9 {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+    .item10 {
+      grid-column: 2 / 2;
+      grid-row: 3 / 4;
+    }
+    .item11 {
+      grid-column: 3 / 3;
+      grid-row: 3 / 4;
+    }
+    .item12 {
+      grid-column: 4 / 4;
+      grid-row: 3 / 4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item item1">Item 1</div>
+
+    <div class="item item2">
+      <div class="sub-grid">
+        <div class="sub-item">Sub 1</div>
+        <div class="sub-item">Sub 2</div>
+        <div class="sub-item">Sub 3</div>
+        <div class="sub-item">Sub 4</div>
+      </div>
+    </div>
+
+    <div class="item item3">
+      <div class="sub-grid">
+        <div class="sub-item">Sub 1</div>
+        <div class="sub-item">Sub 2</div>
+        <div class="sub-item">Sub 3</div>
+        <div class="sub-item">Sub 4</div>
+      </div>
+    </div>
+
+    <div class="item item4">Item 4</div>
+
+    <div class="item item5">Item 5</div>
+
+    <div class="item item6">
+      <div class="sub-grid2">
+        <div class="sub-item">Sub 1</div>
+        <div class="sub-item">Sub 2</div>
+      </div>
+    </div>
+
+    <div class="item item7">
+      <div class="sub-grid">
+        <div class="sub-item">Sub 1</div>
+        <div class="sub-item">Sub 2</div>
+      </div>
+    </div>
+
+    <div class="item item8">Item 8</div>
+
+    <div class="item item9">
+      <div class="sub-grid">
+        <div class="sub-item">Sub 1</div>
+        <div class="sub-item">Sub 2</div>
+        <div class="sub-item">Sub 3</div>
+        <div class="sub-item">Sub 4</div>
+      </div>
+    </div>
+    <div class="item item10">Item 10</div>
+    <div class="item item11">Item 11</div>
+    <div class="item item12">
+        <div class="sub-grid">
+          <div class="sub-item">Sub 1</div>
+          <div class="sub-item">Sub 2</div>
+          <div class="sub-item">Sub 3</div>
+          <div class="sub-item">Sub 4</div>
+        </div>
+      </div>
+
+  </div>
+
+</body>
+</html>

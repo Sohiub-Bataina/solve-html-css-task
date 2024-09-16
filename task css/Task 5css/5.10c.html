@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    background-color: #ddd;
+
+}
+.profile-settings a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+.profile-settings a:hover{
+    background-color: #ddd;
+}
+
+.container {
+    text-align: center;
+}
+
+.app-logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    margin-bottom: 20px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.action-buttons button:hover {
+    background-color: #ddd;
+}
+
+footer {
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links a, .footer-terms a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+            </ul>
+            <div class="profile-settings">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="app-logo">
+                <img src="https://as2.ftcdn.net/v2/jpg/02/09/62/89/1000_F_209628955_dUl2q4niHlCUPQckuVIk6nWJ6wnPHghk.jpg" alt="App Logo">
+                <form class="search-form">
+                    <input type="text" placeholder="Search...">
+                </form>
+            </div>
+            <div class="action-buttons">
+                <button>Do the thing!</button>
+                <button>Do the other thing!</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Advertising Business</a>
+        </div>
+        <div class="footer-terms">
+            <a href="#">Privacy Terms</a>
+        </div>
+    </footer>
+</body>
+</html>

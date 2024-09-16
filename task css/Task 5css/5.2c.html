@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aliceblue;
+            padding: 10px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        .logo{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            padding-left: 1px;
+        }
+        .nav-text{
+            list-style: none;
+            display: flex;
+        }
+        .nav-text li{
+            margin-left: 20px;
+        }
+        .nav-text div{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            padding: 1px 15px;
+            transition: backgrount-color 0.3 ease;
+            margin-right: 50px;
+        }
+        .nav-text div:hover{
+            background-color: #555;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Navbars</h1>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-text">
+            <li><div>Contact</div></li>
+            <li><div>Work</div></li>
+            <li><div>Portfolio</div></li>
+            
+        </ul>
+    </nav>
+    
+</body>
+</html>
