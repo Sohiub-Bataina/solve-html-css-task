@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+        .square:nth-child(even) {
+            background-color: lightblue;
+        }
+        .square:nth-child(odd) {
+            background-color: lightgreen;
+        }
+        .theOddOne {
+            position: absolute;
+            left: 40%;
+            top: 10%
+        }
+        .hide {
+            opacity: 0%;
+        }
+    </style>
+
+</head>
+<body>  
+    <div class="row">
+        <div style="background-color: red;" class="theOddOne square">1</div>
+        <div class="square hide">1</div>
+        <div class="square">2</div>
+        <div class="square">3</div>
+        <div class="square">4</div>
+    </div>
+    <div class="row">
+        <div class="square">5</div>
+        <div class="square">6</div>
+        <div class="square">7</div>
+        <div class="square">8</div>
+    </div>
+    <div class="row">
+        <div class="square">9</div>
+        <div class="square">10</div>
+        <div class="square">11</div>
+        <div class="square">12</div>
+    </div>
+
+</body>
+</html>

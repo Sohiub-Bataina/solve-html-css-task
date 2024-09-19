@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Website Mockup</title>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #003580;
+    color: white;
+    padding: 20px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between; /* الأزرار على اليمين */
+    align-items: flex-start;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Nav Links Styles (Horizontally aligned) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* مسافة بين الروابط */
+    margin-top: 10px; /* مسافة صغيرة بين الشعار وروابط التنقل */
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Promo Section Styles */
+.promo-section {
+    text-align: left;
+    margin: 40px 0;
+}
+
+.promo-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.promo-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sign-in-register {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sign-in-register:hover {
+    background-color: #004090;
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.currency-language {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.list-property, .register, .sign-in {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.list-property:hover, .register:hover, .sign-in:hover {
+    background-color: #0056b3;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-bar input,
+.search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    width: 200px;
+    border: 1px solid #ddd;
+}
+
+.search-bar button {
+    background-color: #003580;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .search-bar form {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+ /* Offers Section */
+ .offers-section {
+            margin: 40px 0;
+        }
+
+        .offers-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .offers {
+            display: flex;
+            gap: 20px;
+        }
+
+        .offer-card {
+            position: relative;
+            width: 50%;
+        }
+
+        .offer-image {
+            position: relative;
+        }
+
+        .offer-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .offer-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 97%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .offer-card:hover .offer-overlay {
+            opacity: 1;
+        }
+
+        .offer-overlay h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .offer-overlay p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .offer-overlay button {
+            padding: 10px 20px;
+            background-color: #003580;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .offer-overlay button:hover {
+            background-color: #0056b3;
+        }
+        /* Property Type Section Styles */
+.property-type-section {
+    margin: 40px 0;
+}
+
+.property-type-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.property-types {
+    display: flex;
+    gap: 20px;
+}
+
+.property-card {
+    text-align: center;
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.property-card p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.weekend-deals {
+    padding: 20px;
+    text-align: left;
+}
+
+.deals-container {
+    display: flex;
+    gap: 30px;
+}
+
+.deal-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.deal-card img {
+    width: 100%;
+    height: auto;
+}
+
+.deal-info {
+    padding: 10px;
+}
+
+.badge {
+    display: inline-block;
+    background: #0052cc;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.rating {
+    font-size: 0.9em;
+    color: #4caf50;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color:black;
+}
+.red-font{
+    font-size: 0.9em;
+    color: red;
+
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-section {
+    width: 18%;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #000;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.currency-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.currency-section img {
+    width: 25px;
+    height: 25px;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.footer-logos img {
+    width: 80px;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .currency-section {
+        justify-content: flex-start;
+    }
+
+    .footer-logos {
+        flex-wrap: wrap;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="top-bar">
+                <div class="left-side">
+                    <div class="logo">
+                        <h1>Booking.com</h1>
+                    </div>
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="#">Stays</a></li>
+                            <li><a href="#">Flights</a></li>
+                            <li><a href="#">Car rentals</a></li>
+                            <li><a href="#">Attractions</a></li>
+                            <li><a href="#">Airport taxis</a></li>
+                        </ul>
+                    </nav>
+                    <div class="promo-section">
+                        <h2>Sign in, save money</h2>
+                        <p>Save 10% or more at participating properties – just look for the blue Genius label.</p>
+                        <button class="sign-in-register">Sign in or register</button>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="currency-language">
+                        <span>JOD</span>
+                        <img src="https://www.empireindustries.com/wp-content/uploads/2023/03/american-flag-logo-vector.png" alt="Language" width="24">
+                    </div>
+                    <button class="list-property">List your property</button>
+                    <button class="register">Register</button>
+                    <button class="sign-in">Sign in</button>
+                </div>
+            </div>
+           
+        </div>
+    </header>
+ <!-- Main Content -->
+ <main>
+    <div class="container">
+        <!-- Search Bar Section -->
+        <div class="search-bar">
+            <form>
+                <input type="text" placeholder="Where are you going?">
+                <input type="date" placeholder="Check-in">
+                <input type="date" placeholder="Check-out">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Offers Section -->
+        <section class="offers-section">
+            <h2>Offers</h2>
+            <p>Promotions, deals, and special offers for you</p>
+            <div class="offers">
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="https://r-xx.bstatic.com/xdata/images/xphoto/714x300/350960127.jpeg?k=e2732d40882766c8edd0001d7cca566de1d43af2d117b964f2e3ccf579d9a498&o=" alt="Offer 1">
+                        <div class="offer-overlay">
+                            <h3>Seize the moment!</h3>
+                            <p>Save 15% or more when you book and stay before October 1, 2024.</p>
+                            <button>Find Getaway Deals</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_ey_FasB2ux63dM08RS5TewsjxPE6Nu6VzQ&s" height= 240px;alt="Offer 2">
+                        <div class="offer-overlay">
+                            <h3>Go for a good time, not a long time</h3>
+                            <p>Finish your year with a mini break. Save 15% or more when you book and stay by January 7, 2025.</p>
+                            <button>Find Late Escape Deals</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Property Type Section -->
+        <section class="property-type-section">
+            <h2>Browse by Property Type</h2>
+            <div class="property-types">
+                <div class="property-card">
+                    <img src="https://q-xx.bstatic.com/xdata/images/xphoto/263x210/57584488.jpeg?k=d8d4706fc72ee789d870eb6b05c0e546fd4ad85d72a3af3e30fb80ca72f0ba57&o=" alt="Hotel">
+                    <p>Hotels</p>
+                </div>
+                <div class="property-card">
+                    <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/119467716.jpeg?k=f3c2c6271ab71513e044e48dfde378fcd6bb80cb893e39b9b78b33a60c0131c9&o=" alt="Apartment">
+                    <p>Apartments</p>
+                </div>
+                <div class="property-card">
+                    <img src="https://r-xx.bstatic.com/xdata/images/xphoto/263x210/45450084.jpeg?k=f8c2954e867a1dd4b479909c49528531dcfb676d8fbc0d60f51d7b51bb32d1d9&o=" alt="Resort">
+                    <p>Resorts</p>
+                </div>
+                <div class="property-card">
+                    <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=" alt="Villa">
+                    <p>Villas</p>
+                </div>
+            </div>
+        </section>
+        <section class="weekend-deals">
+            <h2>Deals for the weekend</h2>
+            <p>Save on stays for September 20 - September 22</p>
+            <div class="deals-container">
+                <!-- عرض العروض كـ كروت باستخدام div -->
+                <div class="deal-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/square240/586778347.jpg?k=a82017e8ca79c568422b42a5772d7d4a0bbd1036bf8835ecbac60f6fcf8cdd4f&o=" alt="Rum Maria Luxury Camp">
+                    <div class="deal-info">
+                        <span class="badge">Genius</span>
+                        <h3>RUM MARiA LUXURY CAMP</h3>
+                        <p>Wadi Rum, Jordan</p>
+                        <span class="rating"><span class="badge">9.5</span> Exceptional · 67 reviews</span>
+                        <span class="price">2 nights <del class="red-font" >JOD 32</del> JOD 24</span>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/square240/557214823.jpg?k=8a5cfee4f0e55abb348698b9f560c9e90a4cdd11ef745b546f288d5490379954&o=" alt="Rum Family Luxury Camp">
+                    <div class="deal-info">
+                        <span class="badge">Genius</span>
+                        <h3>Rum Family Luxury Camp</h3>
+                        <p>Wadi Rum, Jordan</p>
+                        <span class="rating"><span class="badge">10.0</span> Wonderful · 12 reviews</span>
+                        <span class="price">2 nights <del class="red-font" >JOD 113</del> JOD 91</span>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/square240/416116253.jpg?k=ea605b9219d314d97ec6b82fd261e19161bd93958fae9ff995ad3d87c5bab39d&o=" alt="Sunday Hotel holiday International Dubai">
+                    <div class="deal-info">
+                        <span class="badge">Genius</span>
+                        <h3>Sunday Hotel holiday International Dubai</h3>
+                        <p>Dubai, United Arab Emirates</p>
+                        <span class="rating"><span class="badge">8.8</span> Excellent · 2,464 reviews</span>
+                        <span class="price">2 nights <del class="red-font" >JOD 134</del> JOD 62</span>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/square240/71683934.jpg?k=ac89fd04fe80d69516289af0fdf037a420f3cfce5be712cc3019ab380e058712&o=" alt="City Seasons Towers Hotel Bur Dubai">
+                    <div class="deal-info">
+                        <span class="badge">Genius</span>
+                        <h3>City Seasons Towers Hotel Bur Dubai</h3>
+                        <p>Dubai, United Arab Emirates</p>
+                        <span class="rating"><span class="badge">6.7</span> Good · 6,850 reviews</span>
+                        <span class="price">2 nights <del class="red-font" >JOD 76</del> JOD 65</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Coronavirus (COVID-19)</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Manage your trips</a></li>
+                <li><a href="#">Contact Customer Service</a></li>
+                <li><a href="#">Safety Resource Center</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Discover</h3>
+            <ul>
+                <li><a href="#">Genius loyalty program</a></li>
+                <li><a href="#">Seasonal and holiday deals</a></li>
+                <li><a href="#">Travel articles</a></li>
+                <li><a href="#">Booking.com for Business</a></li>
+                <li><a href="#">Traveller Review Awards</a></li>
+                <li><a href="#">Car rental</a></li>
+                <li><a href="#">Flight finder</a></li>
+                <li><a href="#">Restaurant reservations</a></li>
+                <li><a href="#">Booking.com for Travel Agents</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Terms and settings</h3>
+            <ul>
+                <li><a href="#">Privacy & cookies</a></li>
+                <li><a href="#">Terms & conditions</a></li>
+                <li><a href="#">Partner dispute</a></li>
+                <li><a href="#">Modern Slavery Statement</a></li>
+                <li><a href="#">Human Rights Statement</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Partners</h3>
+            <ul>
+                <li><a href="#">Extranet login</a></li>
+                <li><a href="#">Partner help</a></li>
+                <li><a href="#">List your property</a></li>
+                <li><a href="#">Become an affiliate</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About Booking.com</a></li>
+                <li><a href="#">How We Work</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Press center</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Investor relations</a></li>
+                <li><a href="#">Corporate contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="currency-section">
+            <img src="https://www.empireindustries.com/wp-content/uploads/2023/03/american-flag-logo-vector.png" alt="USA Flag">
+            <span>JOD</span>
+        </div>
+        <p>Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.</p>
+        <div class="footer-logos">
+            <img src="https://1000logos.net/wp-content/uploads/2021/05/Booking.Com-logo.png" alt="Booking.com">
+            <img src="https://press.priceline.com/wp-content/uploads/2019/10/Priceline_Logo_RGB_Blue_2019-1.png" alt="Priceline">
+            <img src="https://logos-world.net/wp-content/uploads/2021/07/Kayak-Logo.png" alt="Kayak">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Agoda_transparent_logo.png" alt="Agoda">
+            <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/opentable_logo_icon_168923.png" alt="OpenTable">
+        </div>
+        <p>Copyright © 1996–2024 Booking.com™. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
